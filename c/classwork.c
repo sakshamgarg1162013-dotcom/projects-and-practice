@@ -1,17 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int a[5]={5,3,1,4,2},i,j,temp;
-    for(i=0;i<5;i++){
-        for(j=i+1;j<5;j++){
-            if(a[i]>a[j]){
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-            }
+    int a[2][3];
+    int sum =0;
+    printf("enter the elements in the 2d array :\n");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            scanf("%d",&a[i][j]);
         }
     }
-    for(i=0;i<5;i++)
-        printf("%d ",a[i]);
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            sum+=a[i][j];
+        }
+    }
+
+    printf("the total sum of the elements in the 2d array is : %d",sum);
+
     return 0;
 }

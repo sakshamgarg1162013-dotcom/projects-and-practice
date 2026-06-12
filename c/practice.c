@@ -1,24 +1,28 @@
 #include <stdio.h>
-
-int main(){
-    int n,m,unit;
+int main (){
+    int n;
+    printf("enter the number : ");
     scanf("%d",&n);
-    m=0;
-    unit=1;
-    while (n!=0)
+
+    for (int i = 0; i < n; i++)
     {
-        int ld=n%10;
-        if (ld==0)
+        for (int j = 0; j < n; j++)
         {
-            ld=1;
+            if(j%2==0){
+                printf("1 ");
+            }
+            else{
+                printf("0 ");
+            }
+            
         }
-        ld = ld*unit;
-        n=n/10;
-        m=m+ld;
-        unit=unit*10;
+        printf("\n");
         
     }
-    printf("%d",m);
-    return 0;
+    
 
-}
+    
+
+
+    return 0;
+ }
